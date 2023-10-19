@@ -24,7 +24,7 @@ function play() {
     return;
   }
   if (history.includes(userValue)) {
-    resultArea.textContent("이미 입력한 숫자에요... 다른 숫자를 넣어주세요.");
+    resultArea.textContent= "이미 입력한 숫자에요... 다른 숫자를 넣어주세요.";
     return;
   }
 
