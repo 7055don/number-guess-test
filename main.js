@@ -11,6 +11,10 @@ let history = [];
 playButton.addEventListener("click", play);
 resetButton.addEventListener("click", reset);
 
+userInput.addEventListener("focus", function () {
+  userInput.value = "";
+});
+
 function pickRandomNum() {
   computerNum = Math.floor(Math.random() * 100) + 1;
   console.log("정답", computerNum);
@@ -24,7 +28,7 @@ function play() {
     return;
   }
   if (history.includes(userValue)) {
-    resultArea.textContent= "이미 입력한 숫자에요... 다른 숫자를 넣어주세요.";
+    resultArea.textContent = "이미 입력한 숫자에요... 다른 숫자를 넣어주세요.";
     return;
   }
 
